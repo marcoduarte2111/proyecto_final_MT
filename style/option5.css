@@ -1,0 +1,49 @@
+#container{
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ECDFCC;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    grid-gap: 10px;
+}
+
+#tape{
+    display: flex;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.celda{
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#turingSimulation{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+#return{
+    margin-top: 50px;
+}
+
+.heading{
+    background-color: lightgreen;
+}
+
+.denied{
+    background-color: lightcoral;
+}
+
+#stateDisplay{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 10px;
+}
