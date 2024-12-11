@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reducción de Autómatas</title>
+    <link rel="stylesheet" href="../style/option1.css">
+    <link rel="stylesheet" href="../style/keyboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
+</head>
+<body class="poiret-one-regular">
+    <h1>Tipo de Lenguaje</h1>
+   
+   
+    <div class="container">     
+        <!-- Sección para agregar transiciones -->
+        <div id="agregar_lenguaje">
+            <h2>Ingresar Lenguaje:</h2>
 
+            <input type="text" id="language-input" placeholder="Ej: aa*b*a">
+
+            <button id="add-transition" onclick="main()">Verificar Tipo</button>
+            <div class="transition-list" id="transition-list"></div>
+        </div>
+
+        
+    <div class="keyboard-container1">
+        <h2>Teclado Principal</h2>
+        <div class="keyboard" id="main-keyboard">
+            <div class="key" onclick="addCharacter('a')">a</div>
+            <div class="key" onclick="addCharacter('b')">b</div>
+            <div class="key" onclick="addCharacter('c')">c</div>
+            <div class="key" onclick="addCharacter('1')">1</div>
+            <div class="key" onclick="addCharacter('0')">0</div>
+            <div class="key" onclick="addCharacter('n')">n</div>
+            <div class="key" onclick="addCharacter('m')">m</div>
+            <div class="key" onclick="addCharacter('p')">p</div>
+            <div class="key" onclick="addCharacter('z')">z</div>
+            <div class="key" onclick="addCharacter('w')">w</div>
+            <div class="key" onclick="addCharacter('(')">(</div>
+            <div class="key" onclick="addCharacter(')')">)</div>
+            <div class="key" onclick="addCharacter('{')">{</div>
+            <div class="key" onclick="addCharacter('}')">}</div>
+            <div class="key" onclick="addCharacter('#')">#</div>
+        </div>
+    </div>
+
+    
+    <div class="keyboard-container2">
+        <h2>Teclado de Exponentes</h2>
+        <div class="keyboard" id="exponent-keyboard">
+            <div class="key" onclick="addExponent('n')">n</div>
+            <div class="key" onclick="addExponent('m')">m</div>
+            <div class="key" onclick="addExponent('p')">p</div>
+            <div class="key" onclick="addExponent('*')">*</div>
+            <div class="key" onclick="addExponent('+')">+</div>
+        </div>
+    </div>
+
+        <div id="clear-button-container"><button id="clear-button" onclick="clearInput()">Limpiar</button></div>
+        <div id="return"><button redirec><a href="../index.html"><img src="../images/back-button.png" alt="return to home"></a></button></div>
+        
+        <div class="answer-container">
+            <div>
+                <textarea name="language-type" id="answer"></textarea>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Agregamos Viz.js desde un CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/viz.js" type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/full.render.js" type="application/javascript"></script>
+    <script src="../logic/option1.js"></script>
+    <script src="../logic/keyboard.js"></script>
+</body>
+</html>

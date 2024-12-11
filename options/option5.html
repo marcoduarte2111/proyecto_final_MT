@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reducción de Autómatas</title>
+    <link rel="stylesheet" href="../style/option3.css">
+    <link rel="stylesheet" href="../style/option5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
+</head>
+<body class="poiret-one-regular">
+    <h1>Máquina de Turing</h1>
+   
+   
+    <div id="container">     
+        <div id="agregar_estados">
+            <!-- Formulario para ingresar datos -->
+            <label for="initial-state">Lenguaje de la máquina:</label>
+            <input type="text" id="regexExpression" placeholder="a*b+">
+
+            
+
+            <div id="turingSimulation">
+                <h1>Simulación</h1>
+                
+                    <label for="stringInput">Ingresa una cadena:</label>
+                    <input type="text" id="stringInput" placeholder="Ejemplo: ab">
+                    <button id="simulateButton">Simular</button>
+                
+                <div id="tape"></div>
+
+                <div class="state" id="stateDisplay"></div>
+                <div id="result"></div>
+            </div>
+            <div id="return"><button redirec><a href="../index.html"><img src="../images/back-button.png" alt="return to home"></a></button></div>
+        </div>
+</div>
+    
+
+    <!-- Agregamos Viz.js desde un CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/viz.js" type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/full.render.js" type="application/javascript"></script>
+    <script src="../logic/option5.js"></script>
+</body>
+</html>

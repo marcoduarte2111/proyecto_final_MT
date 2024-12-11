@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reducción de Autómatas</title>
+    <link rel="stylesheet" href="../style/option3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
+</head>
+<body class="poiret-one-regular">
+    <h1>Reducción de Autómatas Finitos</h1>
+   
+   
+    <div class="container">     
+        <div id="agregar_estados">
+            <!-- Formulario para ingresar datos -->
+            <label for="initial-state">Estado Inicial:</label>
+            <input type="text" id="initial-state" placeholder="Ej. q0">
+
+            <label for="accepting-states">Estados de Aceptación (separados por comas):</label>
+            <input type="text" id="accepting-states" placeholder="Ej. q1, q2">
+
+            <!-- Sección para agregar estados -->
+            <h3>Agregar Estados</h3>
+            <input type="text" id="new-state" placeholder="Nuevo Estado">
+            <button id="add-state">Agregar Estado</button>
+            <div class="state-list" id="state-list"></div>
+        </div>
+
+            <!-- Sección para agregar transiciones -->
+        <div id="agregar_transiciones">
+            <h3>Agregar Transiciones</h3>
+            <label for="from-state">Estado Origen:</label>
+            <select id="from-state"></select>
+
+            <label for="transition-symbol">Símbolo:</label>
+            <input type="text" id="transition-symbol" placeholder="Símbolo de transición">
+
+            <label for="to-state">Estado Destino:</label>
+            <select id="to-state"></select>
+
+            <button id="add-transition">Agregar Transición</button>
+            <div class="transition-list" id="transition-list"></div>
+        </div>
+
+
+       
+
+        <div id="visualizacion_automata">
+            <h2>Visualización del Autómata</h2>
+            <div id="show-automaton"><button>Mostrar Autómata</button></div>
+            <div id="graph"></div>
+        </div>
+
+        <div id="reduccion_automata">
+            <h2>Visualización del Autómata Reducido</h2>
+            <div id="reduce-automaton"><button >Verificar y Reducir Autómata</button></div>
+            <div id="reduced-graph"></div>
+        </div>
+        <h2 class="section-title">Función de Transición del Autómata Reducido:</h2>
+        <div id="reduced-transition-function"></div>
+
+        <div class="msg" id="reduction-msg"></div>
+        <div id="return"><button redirec><a href="../index.html"><img src="../images/back-button.png" alt="return to home"></a></button></div>
+    </div>
+    
+
+    <!-- Agregamos Viz.js desde un CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/viz.js" type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/full.render.js" type="application/javascript"></script>
+    <script src="../logic/option3.js"></script>
+</body>
+</html>

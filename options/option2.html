@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reducción de Autómatas</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.24.0/cytoscape.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/option2.css">
+</head>
+<body class="poiret-one-regular">
+    
+    
+    <div class="container">
+        
+        <div id="check-type">
+            <h1>Autómata Finito</h1>
+            <label for="languageInput">Ingrese el lenguaje (ejemplo: a*b*):</label>
+            <input type="text" id="languageInput" placeholder="Ejemplo: a*b*" />
+            <button id="validateButton">Validar Lenguaje</button>
+            <button id="resetButton" class="hidden">Reiniciar</button>
+            <div id="validationResult"></div>
+        </div>
+
+        
+
+        <div id="automataInputs" class="hidden">
+            <h3>Definir Componentes del Autómata</h3>
+            <label for="statesInput">Conjunto de Estados (Q):</label>
+            <input type="text" id="statesInput" placeholder="Ejemplo: q0,q1,q2" />
+            <br />
+            <label for="initialStateInput">Estado Inicial (q0):</label>
+            <input type="text" id="initialStateInput" placeholder="Ejemplo: q0" />
+            <br />
+            <label for="alphabetInput">Alfabeto (Σ):</label>
+            <input type="text" id="alphabetInput" placeholder="Ejemplo: a,b" />
+            <br />
+            <label for="finalStatesInput">Estados Finales (F):</label>
+            <input type="text" id="finalStatesInput" placeholder="Ejemplo: q2" />
+            <br />
+            <button id="nextStepButton">Definir Transiciones</button>
+        </div>
+
+        <div id="transitionInputs" class="hidden">
+            <h3>Definir Transiciones</h3>
+            <div id="transitionForm"></div>
+            <button id="buildAutomataButton">Construir Autómata</button>
+        </div>
+
+        <div id="automataSection" class="hidden">
+            <h2>Autómata Construido</h2>
+            <div id="cy"></div>
+
+            <div id="transitionTable" class="hidden">
+                <h3>Función de Transición</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Estado Actual</th>
+                            <th>Símbolo</th>
+                            <th>Estado Destino</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transitionTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="verifySection" class="hidden">
+            <h3>Verificar Cadenas</h3>
+            <label for="cadenaInput">Ingrese una cadena para verificar:</label>
+            <input type="text" id="cadenaInput" placeholder="Ejemplo: abab" />
+            <button id="verifyButton">Verificar</button>
+            <div id="traceOutput"></div>
+        </div>
+        <div id="return"><button redirec><a href="../index.html"><img src="../images/back-button.png" alt="return to home"></a></button></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/viz.js" type="application/javascript"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/full.render.js" type="application/javascript"></script>
+    <script src="../logic/option2.js"></script>
+</body>
+</html>
